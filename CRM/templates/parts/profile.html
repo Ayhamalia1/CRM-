@@ -1,0 +1,31 @@
+{%extends 'parts/base.html'%}
+{%block content%}
+
+<div class="container mt-5">
+  <div class="card text-white bg-dark shadow-lg border-light rounded">
+    <div class="card-header text-center">
+      <h3 class="mb-0">{{user.username }} Profile</h3>
+    </div>
+    <div class="card-body">
+      <dl class="row">
+        <dt class="col-sm-3">Username</dt>
+        <dd class="col-sm-9">{{ user.username }}</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">{{ user.email }}</dd>
+
+        <dt class="col-sm-3">First Name</dt>
+        <dd class="col-sm-9">{{ user.first_name }}</dd>
+
+        <dt class="col-sm-3">Last Name</dt>
+        <dd class="col-sm-9">{{ user.last_name }}</dd>
+
+
+        <dt class="col-sm-3">Joined</dt>
+        <dd class="col-sm-9">{{ user.date_joined|date:"F d, Y" }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+{%endblock content%}

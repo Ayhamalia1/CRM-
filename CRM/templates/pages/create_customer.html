@@ -1,0 +1,14 @@
+{%extends 'parts/base.html'%}
+{% load crispy_forms_tags%}
+{%block content%}
+<h2 class="mt-4 mb-4">Create Customer</h2>
+<form method="POST" class="container">
+    {%csrf_token%}
+    {{ form|crispy }}
+    <div class="d-flex justify-content-center">
+     <button type="submit" class="btn btn-primary mt-4 fs-3">Add</button>
+    </div>
+    
+
+</form>
+{%endblock content%}
